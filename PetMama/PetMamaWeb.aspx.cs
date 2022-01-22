@@ -155,21 +155,6 @@ namespace PetMama
             
         }
 
-        void crButtonIslem(object obj, EventArgs e)
-        {
-            string[] dizi;
-            string obj_str = obj.ToString();
-            if (obj_str.IndexOf("Image")>= 0)
-            {
-                ImageButton btDurum = (ImageButton)obj;              
-                dizi = btDurum.ID.Split('_');
-            }
-            else {
-                Button btDurum = (Button)obj;
-                dizi = btDurum.ID.Split('_');
-            }          
-            int a = int.Parse(dizi[1]);
-            pnl.Controls.Add(new LiteralControl(tbl.Rows[a].Cells[1].Text));
-        }
+        
     }
 }
